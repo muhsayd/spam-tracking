@@ -5,4 +5,4 @@ else
 	cd /root
 	git clone https://github.com/muhsayd/spam-tracking.git >/dev/null
 fi
-grep -q '/root/spam-tracking/track-spam.sh'  /var/spool/cron/root || echo "*	* * * * sh /root/spam-tracking/track-spam.sh" >> /var/spool/cron/root
+grep -q '/root/spam-tracking/track-spam.sh'  /var/spool/cron/root || echo "*	* * * * sh /root/spam-tracking/track-spam.sh >/dev/null 2>&1" >> /var/spool/cron/root
